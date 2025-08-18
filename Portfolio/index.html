@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maysoun's Portfolio</title>
+<style>
+/* General styles */
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #fff0f5;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffb6c1;
+  color: white;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  color: #fffacd;
+}
+
+/* Hero Image */
+.hero-image {
+  background-image: url('https://cdn.pixabay.com/photo/2022/08/23/01/10/cape-7404790_1280.jpg');
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin-top: 50px;
+}
+
+.hero-text {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Profile Image Styling */
+.profile {
+  text-align: center;
+  margin: 40px;
+}
+
+.profile-img {
+  width: 200px;
+  border-radius: 50%;
+  filter: brightness(0.9) saturate(1.2);
+}
+
+/* Table Styling */
+.table-section {
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 60%;
+}
+
+th, td {
+  border: 2px solid #ff69b4;
+  padding: 10px;
+}
+
+th {
+  background-color: #ffc0cb;
+}
+
+/* Columns */
+.columns {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.column {
+  width: 45%;
+  height: 150px;
+  background-color: #ffe4e1;
+  color: #800080;
+  padding: 15px;
+  box-shadow: 0 0 10px #ffa07a;
+}
+
+/* Paragraph hover */
+.hover-text {
+  text-align: center;
+  font-size: 18px;
+  margin: 20px;
+  transition: color 0.3s ease;
+}
+
+.hover-text:hover {
+  color: #db7093;
+  font-weight: bold;
+}
+
+/* Image Overlay Fade */
+.overlay-container {
+  position: relative;
+  width: 300px;
+  margin: 30px auto;
+}
+
+.overlay-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 182, 193, 0.8);
+  color: white;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: 0.5s ease;
+  padding: 20px 0;
+}
+
+.overlay-container:hover .overlay {
+  opacity: 1;
+}
+
+/* Video Section */
+.video-section video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Video with text overlay */
+.video-text-container {
+  position: relative;
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.video-text-container video {
+  width: 100%;
+  height: auto;
+}
+
+.video-overlay-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(255, 20, 147, 0.7);
+  padding: 10px 20px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-weight: bold;
+  background-color: #ffe4e1;
+  padding: 15px 0;
+  margin-top: 50px;
+}
+
+</style>
+</head>
+<body>
+
+  <!-- Fixed Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#videos">Videos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header with Text Over Image -->
+  <header class="hero-image">
+    <div class="hero-text">
+      <h1>Welcome to Maysoun Helal Aldakkak's Portfolio</h1>
+    </div>
+  </header>
+
+  <!-- Profile Image (centered, filtered, rounded) -->
+  <section id="about" class="profile">
+    <h2>My Profile</h2>
+    <img src="https://cdn.pixabay.com/photo/2015/11/03/10/23/watercolor-1020509_1280.jpg" alt="Photo" class="profile-img" />
+  </section>
+
+  <!-- Table -->
+  <section  class="table-section">
+    <h2>My Skills</h2>
+    <table>
+      <tr>
+        <th>Skill</th>
+        <th>Level</th>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>Intermediate</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td>Intermediate</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Two-Column Layout -->
+  <section class="columns">
+    <div class="column left">
+      <p>This is the left column with some info about me!</p>
+    </div>
+    <div class="column right">
+      <p>This is the right column where I share my hobbies!</p>
+    </div>
+  </section>
+
+  <!-- Paragraph with hover effect -->
+  <section class="hover-section">
+    <p class="hover-text">Hover over this paragraph to see a cool effect!</p>
+  </section>
+
+  <!-- Image Overlay Fade -->
+  <section id="gallery" class="overlay-fade">
+    <div class="overlay-container">
+      <img src="https://cdn.pixabay.com/photo/2015/11/03/10/23/watercolor-1020509_1280.jpg" alt="Overlay Example" />
+      <div class="overlay">Hello There!</div>
+    </div>
+  </section>
+
+  <!-- Autoplay Video -->
+  <section id="video" class="video-section">
+    <video autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2015/08/10/197-135846412_tiny.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Video with Text Overlay -->
+  <section class="video-overlay">
+    <div class="video-text-container">
+      <video autoplay muted loop>
+        <source src="https://cdn.pixabay.com/video/2015/08/10/197-135846412_tiny.mp4" type="video/mp4" />
+      </video>
+      <div class="video-overlay-text">This is my creative space 🎥</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Maysoun Helal Aldakkak | All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
